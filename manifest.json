@@ -1,0 +1,30 @@
+{
+    "manifest_version": 3,
+    "name": "Auto Apply Extension",
+    "version": "1.0.0",
+    "description": "Automatically fill job application forms and track history.",
+    "permissions": ["storage", "activeTab", "scripting", "notifications"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["*://*/careers/*", "*://*/jobs/*"],
+        "js": ["content.js"]
+      }
+    ],
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAAKElEQVR42mNgwAL/gDAAEM3Q0AGIYShAARCAZDjAwGIAEAIACAABX1DWYXAAAAAElFTkSuQmCC",
+        "48": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAAKElEQVR42mNgwAL/gDAAEM3Q0AGIYShAARCAZDjAwGIAEAIACAABX1DWYXAAAAAElFTkSuQmCC",
+        "128": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAAKElEQVR42mNgwAL/gDAAEM3Q0AGIYShAARCAZDjAwGIAEAIACAABX1DWYXAAAAAElFTkSuQmCC"
+      }
+    },
+    "icons": {
+      "16": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAAKElEQVR42mNgwAL/gDAAEM3Q0AGIYShAARCAZDjAwGIAEAIACAABX1DWYXAAAAAElFTkSuQmCC",
+      "48": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAAKElEQVR42mNgwAL/gDAAEM3Q0AGIYShAARCAZDjAwGIAEAIACAABX1DWYXAAAAAElFTkSuQmCC",
+      "128": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAAKElEQVR42mNgwAL/gDAAEM3Q0AGIYShAARCAZDjAwGIAEAIACAABX1DWYXAAAAAElFTkSuQmCC"
+    }
+  }
+  
